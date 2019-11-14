@@ -1,0 +1,553 @@
+/**
+
+CSS directory
+
+Labeled sections for easier navigating
+
+01. General            - body, links, fonts, etc
+02. Header/Footer      - header, footer, navigation, etc
+03. Main               - container, posts, post styles
+04. Slider             - slideshow
+05. Responsive         - Mobile design
+
+**/
+
+/* ------------
+
+ 01. General
+
+ ------------ */
+
+body {
+  margin:0px;
+  height:100vh;
+  width:100%;
+  border-top:4px solid #3392d2;
+  font-family:Arial;
+  word-wrap:break-word;
+}
+
+a {
+  text-decoration:none;
+}
+.flex {
+  display:flex;
+  flex-wrap:wrap;
+}
+.centered {
+  align-items:center;
+}
+
+@font-face {
+  font-family:'Intro';
+  src: url('fonts/intro.otf');
+}
+@font-face {
+  font-family:Archer;
+  src: url('fonts/archer-semibold.otf');
+}
+
+/* ------------
+
+ 02. Header
+
+ ------------ */
+header, .footercontent {
+  width:80%;
+  max-width:1340px;
+  font-family:Intro;
+  justify-content:space-between;
+  margin:50px auto;
+  z-index:1;
+}
+
+header img, footer img {
+  height:90px;
+  margin:auto;
+}
+
+.socials {
+  width:18%;
+  padding:0px;
+}
+.socials li {
+  list-style:none;
+  margin:4%;
+  display:inline-block;
+  border-radius:100%;
+  background:#222;
+  width:32px;
+  height:32px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.socials a {
+  color:white;
+}
+
+footer .socials a {
+  color:#58595b;
+}
+
+footer .socials li {
+  background:white;
+}
+.search {
+      width:20%;
+      margin-top:2px;
+          border-bottom:1.4px solid #58595b;
+}
+.search input[type=text] {
+    border:none;
+    background:none;
+    width:calc(100% - 110px);
+    padding-bottom:4px;
+  }
+
+  .search button {
+    background:none;
+    border:none;
+    width:20px;
+    float:right;
+    padding-bottom:4px;
+    transform:translateX(-4px);
+  }
+nav {
+  width:100%;
+  margin-top:70px;
+  justify-content:flex-start;
+}
+
+nav a {
+  color:#6e6f70;
+  font-size:14px;
+  letter-spacing:2px;
+  font-weight:bold;
+  margin:0 6% 0 0;
+  text-transform:uppercase;
+}
+/* ------------
+
+ 03. Main
+
+ ------------ */
+main {
+  width:80%;
+  margin:50px auto;
+  max-width:1340px;
+  display: grid;
+  grid-template-areas:
+        "one one two four"
+        "one one three four"
+       "five five five five"
+       "five five five five";
+    grid-gap: 20px;
+
+}
+
+.grid-item {
+  background:blue;
+  position:relative;
+  overflow:hidden;
+}
+.grid-item:before {
+  content:'';
+  left:0px;
+  position:absolute;
+  background-size:cover;
+  height:100%;
+  width:100%;
+  transition:1s;
+}
+.one {
+  grid-area:one;
+  position:relative;
+}
+
+.two:before {
+  background:url(images/quick.png);
+
+}
+
+.two {
+  grid-area:two;
+  height:30vh;
+  max-height:250px;
+
+}
+.grid-item:hover:before {
+  transform:scale(1.04);
+  transition:1s;
+}
+.four {
+  grid-area:four;
+
+}
+.four:before {
+  background:url(images/mens.png);
+}
+.three {
+  grid-area:three;
+  height:30vh;
+  max-height:250px;
+}
+.three:before {
+  background:url(images/wedding.png);
+}
+.five {
+  grid-area:five;
+  height:60vh;
+  max-height:500px;
+  background:black;
+}
+.sideimage {
+  width:50%;
+  height:100%;
+  overflow:hidden;
+}
+.sideimage img {
+  height:100%;
+  display:block;
+  transform:translateX(-18%);
+}
+
+.text {
+  font-family:Intro;
+  position:absolute;
+  width:100%;
+  height:calc(100% - 40px);
+  padding:20px 0;
+  color:white;
+  background:rgba(0,0,0,.04);
+  align-items:flex-end;
+  justify-content:center;
+}
+
+.text span {
+  font-size:1.2em;
+  text-shadow:2px 2px 4px rgba(0,0,0,.4)
+}
+.five h1 {
+  margin-top:40px;
+}
+.five .text {
+  width:calc(45% - 40px);
+  position:relative;
+  margin-left:0%;
+  font-size:14px;
+  align-content:flex-start;
+  justify-content:flex-start;
+  padding:20px;
+}
+.paragraphs {
+  margin: 0px auto 30px auto;
+  font-family:Arial;
+  text-transform:normal;
+}
+.paragraphs p {
+  margin:20px auto;
+}
+
+.readmore a, .contact a{
+  color:white;
+  font-size:12px;
+  background:#b8a580;
+  padding:14px 40px;
+  border-radius:2px;
+}
+
+.readmore a:hover, .contact a:hover, .socials li:hover {
+  transition:.2s ease-in-out;
+    filter: brightness(92%);
+}
+
+.contact a {
+  box-shadow:2px 2px 4px rgba(0,0,0,.08)
+}
+footer {
+  width:100%;
+  min-height:200px;
+  background:#58595b;
+  position:relative;
+}
+
+footer:before {
+  content:'';
+  background:url(images/texture.png);
+  width:100%;
+  position:absolute;
+  mix-blend-mode: color-burn;
+  height:100%;
+}
+
+
+/* ------------
+
+ 04. Slider
+
+ ------------ */
+.slideshow {
+  max-width:100%;
+  height:100%;
+  position:absolute!important;
+}
+.slick-list, .slick-track {
+  height:100%;
+}
+.photoslides {
+  position:relative;
+}
+.slideshow img {
+       object-fit: cover;
+       width:100%;
+       height:100%!important;
+}
+.slick-prev, .slick-next {
+  position:absolute;
+  z-index:99;
+  top:50%;
+  font-size:2em;
+  background:transparent;
+  border:none;
+  color:white;
+}
+.slick-prev {
+  left:0px;
+
+}
+
+.slick-next {
+  right:0px;
+}
+.slick-dots {
+    position: absolute;
+    bottom: 20px;
+    z-index:99999;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.slick-dots li {
+  display:inline-block;
+  margin:0 10px 0 0;
+}
+.slick-dots button {
+  color:transparent;
+  height:12px;
+  font-size:0px;
+  overflow:hidden;
+  width:8px;
+  background:white;
+  border-radius:100%;
+  outline:none;
+  border:none;
+}
+.slick-active button{
+  background:#3392d2;
+}
+.slidetext {
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  font-size:2.6em;
+  text-transform:uppercase;
+  left:0px;
+  color:white;
+  background:rgba(0,0,0,.32);
+  justify-content:center;
+  text-align:center;
+  font-family:Intro;
+  opacity:0;
+  transform:scale(1.12);
+  transition:1s;
+  align-content:center;
+}
+
+.slick-current .slidetext {
+  opacity:1;
+    transform:scale(1);
+  transition:1s;
+}
+.slidetext span {
+  display:block;
+  margin:10px auto;
+  width:100%;
+  font-family:Archer;
+}
+
+/* ------------
+
+ 05. Responsive
+
+ ------------ */
+
+ @media screen and (max-width:1300px) {
+   main, header, .footercontent {
+     width:90%;
+   }
+
+   .socials li {
+     width:28px;
+     height:28px;
+   }
+   .grid-item:before {
+     background-position: center;
+     background-size:cover;
+   }
+   .five {
+     height:70vh;
+   }
+   header img {
+    height:auto;
+  }
+  .socials {
+    width:20%;
+  }
+}
+
+@media screen and (max-width:1000px) {
+  nav {
+    justify-content:center;
+    text-align:center;
+  }
+nav a {
+  margin:1% 3%;
+}
+  .socials {
+    width:22%;
+    font-size:.9em;
+  }
+main {
+  grid-template-areas:
+        "one one one one"
+        "one one one one"
+        "two two four four"
+        "three three four four"
+       "five five five five"
+       "five five five five";
+    grid-gap: 20px;
+}
+.socials li {
+  width:24px;
+  height:24px;
+}
+header img, footer img {
+  width:25%;
+  height:auto;
+}
+.sideimage img {
+  transform:translateX(-34%);
+}
+.one {
+  min-height:50vh;
+}
+}
+@media screen and (max-width:700px) {
+
+main, .footercontent, header {
+  width:96%;
+  margin:0px auto;
+}
+  main {
+    display:flex!important;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    margin:0 auto 10px auto;
+  }
+.one, .two, .three, .four, .five {
+  margin:10px 5px;
+}
+
+  .one {
+    width:100%;
+    min-height:40vh;
+  }
+
+  .slidetext {
+    font-size:2em;
+  }
+.two, .three {
+  width:calc(50% - 10px);
+  margin:10px 5px;
+  height:25vh;
+  text-align:center;
+}
+.four {
+  width:100%;
+  height:50vh;
+}
+.socials {
+  width:100%;
+
+  font-size:12px;
+  margin:0px 0 10px 0;
+  padding:10px 0;
+}
+.socials li {
+  margin:1%;
+  height:18px;
+  width:18px;
+}
+
+.search {
+  position:absolute;
+  right:10px;
+  top:10px;
+}
+nav {
+  margin:20px 0;
+}
+header img, footer img {
+  width:30%;
+}
+
+.sideimage {
+  overflow:visible;
+  position:absolute;
+  width:90%;
+
+}
+
+.sideimage img {
+  transform:translateX(-44%);
+}
+.five .text {
+  width:100%;
+  text-align:center;
+    justify-content:center;
+  background:linear-gradient(to right, rgba(0,0,0,.4), rgba(0,0,0,.8));
+}
+
+footer .socials {
+  justify-content:center;
+}
+
+footer img {
+  width:40%;
+  margin:10px auto;
+}
+.contact {
+  padding:10px;
+}
+
+}
+
+@media screen and (max-width:350px) {
+.five {
+  min-height:90vh;
+}
+.paragraphs p{
+  margin:10px auto;
+}
+
+.footercontent {
+  justify-content:center;
+}
+}

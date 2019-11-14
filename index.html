@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Magic Stone</title>
+  <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<header class="flex centered">
+  <ul class="socials flex">
+    <li><a href="/"><i class="fab fa-facebook fa-fw" aria-hidden="true"></i></a></li>
+    <li><a href="/"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a></li>
+      <li><a href="/"><i class="fab fa-youtube fa-fw" aria-hidden="true"></i></a></li>
+        <li><a href="/"><i class="fa fa-rss fa-fw" aria-hidden="true"></i></a></li>
+    </ul>
+    <img src="images/logo.png" alt="magic stone logo">
+    <form class="search">
+       <input type="text" name="search">
+      <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+    </form>
+  <nav class="flex">
+  <a href="/">Home</a> <a href="/">Earrings</a> <a href="/">Pendants</a> <a href="/">Men's Jewelry</a> <a href="/">Religious Jewelry</a> <a href="/">Quick Shops</a></nav>
+</header>
+<main>
+  <div class="grid-item one">
+    <div class="slideshow">
+         <div class="photoslides"><img src="images/custom.png" /> <div class="slidetext flex centered">Custom <span>Handmade</span> Pieces</div></div>
+         <div class="photoslides"><img src="images/custom.png" /><div class="slidetext flex centered">Second <span>slide</span> example</div></div>
+         <div class="photoslides"><img src="images/custom.png" /><div class="slidetext flex centered">Third <span>slide</span> example</div></div>
+            <div class="photoslides"><img src="images/custom.png" /><div class="slidetext flex centered">Fourth <span>slide</span> example</div></div>
+               <div class="photoslides"><img src="images/custom.png" /><div class="slidetext flex centered">Fifth <span>slide</span> example</div></div>
+</div>
+      </div>
+  </div>
+  <div class="grid-item two">
+    <div class="text flex"><span>Quick Shops</span></div>
+  </div>
+  <div class="grid-item three">
+        <div class="text flex"><span>Wedding Bands</span></div>
+  </div>
+  <div class="grid-item four">
+        <div class="text flex"><span>Men's Jewelry</span></div>
+  </div>
+
+  <div class="grid-item five flex">
+    <div class="sideimage">
+        <img src="images/why.png">
+    </div>
+        <div class="text flex">
+<h1>Why Magic Stone?</h1>
+<div class="paragraphs">
+  <p>Magic Stone carries a large selection of Diamond Engagement Rings, Diamond Earrings, Pendants, Bracelets, Pearls and Fashion Jewelry. If you are interested in Beautiful Jewelry which will always make an outstanding presentation in any setting, Magic Stone is the destination for you.
+</p>
+  <p>We are staffed by knowledgeable sales people and Graduates of the Gemological Institute of America. We also understand the importance of service to our customers and our expert jewelers do in-store manufacturing, sizing, and repairs.
+</p>
+</div>
+<div class="readmore">
+  <a href=''>read more </a>
+</div>
+          </div>
+  </div>
+</main>
+<footer class="flex centered">
+  <div class="footercontent flex centered">
+  <ul class="socials flex">
+    <li><a href="/"><i class="fab fa-facebook fa-fw" aria-hidden="true"></i></a></li>
+    <li><a href="/"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a></li>
+      <li><a href="/"><i class="fab fa-youtube fa-fw" aria-hidden="true"></i></a></li>
+        <li><a href="/"><i class="fa fa-rss fa-fw" aria-hidden="true"></i></a></li>
+    </ul>
+      <img src="images/logowhite.png" alt="magic stone logo">
+      <div class="contact">
+        <a href="/">get in touch</a>
+      </div>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('.slideshow').slick({
+dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+    arrows: true,
+    prevArrow:'<button type="button" class="slick-prev"><span class="fa fa-chevron-left"></span></button>',
+        nextArrow:'<button type="button" class="slick-next"><span class="fa fa-chevron-right"></span></button>'
+  });
+});</script>
+</body>
+</html>
