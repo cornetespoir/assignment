@@ -156,7 +156,6 @@ main {
   content:'';
   left:0px;
   position:absolute;
-  background-size:cover;
   height:100%;
   width:100%;
   transition:1s;
@@ -168,7 +167,7 @@ main {
 
 .two:before {
   background:url(images/quick.png);
-
+  background-size:cover;
 }
 
 .two {
@@ -187,6 +186,7 @@ main {
 }
 .four:before {
   background:url(images/mens.png);
+   background-size:cover;
 }
 .three {
   grid-area:three;
@@ -195,6 +195,7 @@ main {
 }
 .three:before {
   background:url(images/wedding.png);
+   background-size:cover;
 }
 .five {
   grid-area:five;
