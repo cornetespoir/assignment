@@ -245,7 +245,7 @@ main {
 .paragraphs {
   margin: 0px auto 30px auto;
   font-family:Arial;
-  text-transform:normal;
+  text-transform:none;
 }
 .paragraphs p {
   margin:20px auto;
